@@ -13,8 +13,28 @@ def screen_clicked(x, y):
     print('You pressed: x=' + str(x) + ', y=' + str(y))
     
     # 6. Call the turtle .penup() method
-    
+    deniz.penup()
     # 7. Move the turtle to a new location using .goto(x, y)
+    deniz.goto(300, 300)
+    deniz.pendown()
+    deniz.goto(-300,300)
+    deniz.goto(-300, -300)
+    deniz.goto(300, -300)
+    deniz.goto(300, 300)
+    deniz.penup()
+    deniz.goto(0, 0)
+    deniz.goto(0, -300)
+    deniz.speed(10)
+    deniz.pendown()
+    deniz.circle(300, steps=100)
+    deniz.penup()
+    deniz.goto(0, -150)
+    deniz.pendown()
+    deniz.begin_fill()
+    deniz.circle(150, steps=100)
+    deniz.end_fill()
+    deniz.goto(0, 0)
+
 
 
 def turtle_clicked(x, y):
@@ -34,17 +54,18 @@ if __name__ == '__main__':
     window.setup(width=0.75, height=0.8, startx=0, starty=0)
     
     # 1. Make a new turtle
-    
+    deniz = turtle.Turtle()
     # 2. Make your turtle's shape 'turtle', .shape('turtle')
-    
+    deniz.shape('turtle')
     # 3. Set your turtle's color using .color('green') and .pencolor('blue')
-    
+    deniz.color('blue')
+    deniz.pencolor('green')
     # 4. Set and new width, length, and outline of our turtle
     #    my_turtle.turtlesize(stretch_wid=10, stretch_len=10, outline=4)
-
+    deniz.turtlesize(stretch_wid=10, stretch_len=10, outline=4)
     # 5. Uncomment the following line and replace 'my_turtle' with your turtle
     # my_turtle.onclick(turtle_clicked)
-
+    deniz.onclick(turtle_clicked)
 # ===================== DO NOT EDIT THE CODE BELOW ============================
     window.onclick(screen_clicked)
     turtle.done()
