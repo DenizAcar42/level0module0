@@ -28,9 +28,9 @@ if __name__ == '__main__':
         # Move the turtle (5*i) pixels. 'i' is the loop variable
         deniz.forward(5*i)
         # Turn the turtle (360/7) degrees to the right
-         deniz.left(360/7)
+        deniz.left(360/7)
         # Change the turtle width to 'i' (the loop variable)
-        
+        deniz.width(1.1*i)
         # Check the pattern against the picture in the recipe. If it matches, you are done!
     
 # ===================== DO NOT EDIT THE CODE BELOW ============================
